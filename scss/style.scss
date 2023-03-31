@@ -1,0 +1,86 @@
+@import "./reset";
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
+    padding: 40px;
+    .country{
+        width: 400px;
+        border: 1px solid rgba(0, 0, 0, 0.692);
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 2px 4px rgba(114, 112, 112, 0.727);
+        cursor: pointer;
+        .state-flag{
+            height: 199px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .state-info{
+            padding: 18px 14px;
+            h4{
+                font-size: 18px;
+                padding: 15px 0;
+            }
+            p{
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+.main-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.385);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+
+    .modal{
+        width: 300px;
+        height: 350px;
+        background-color: #fff;
+        position: relative;
+        border-radius: 12px;
+        opacity: 1;
+        transform: scale(1);
+        .close{
+            position: absolute;
+            top: -5px;
+            right: -20px;
+            background: transparent;
+            outline: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .top-modal{
+            img{
+                width: 100%;
+            }
+        }
+        .bottom-modal{
+            padding: 20px;
+            h4{
+                font-size: 25px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+.show-modal{
+    opacity: 0;
+    transform: scale(0);
+}
